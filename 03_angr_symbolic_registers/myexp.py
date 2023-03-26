@@ -35,6 +35,7 @@ def Go():
     simulation.explore(find=is_successful, avoid=should_abort)
   
     if simulation.found:
+        print("soulution found number: {}".format(len(simulation.found)))
         for i in simulation.found:
             solution_state = i
             solution0 = format(solution_state.solver.eval(passwd0), 'x')

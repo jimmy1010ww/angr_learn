@@ -23,6 +23,7 @@ def Go():
     simulation.explore(find=is_successful, avoid=should_abort)
   
     if simulation.found:
+        print("Totoal solution number : {}".format(len(simulation.found)))
         solution_state = simulation.found[0]
         solution = solution_state.posix.dumps(sys.stdin.fileno())
         print("[+] Success! Solution is: {}".format(solution.decode("utf-8")))
